@@ -17,24 +17,25 @@ public class MyApplication implements CommandLineRunner {
 
     public static void main(String[] args) {
 
-    	SpringApplication.run(MyApplication.class, args);
-    	
+        SpringApplication.run(MyApplication.class, args);
+
     }
 
     @Autowired
-	private ProducerService producerService;
+    private ProducerService producerService;
 
-	@Autowired
-	private ConsumerService consumerService;
+    @Autowired
+    private ConsumerService consumerService;
 
-	@Override
-	public void run(String... args) {
-		if (args[0].equals("1")) {
-			producerService.sendTable();
-		} if (args[0].equals("2")) {
-		consumerService.takeTable();
-		}
-		exit(0);
-	}
+    @Override
+    public void run(String... args) {
+        if (args[0].equals("1")) {
+            producerService.sendTable();
+        }
+        if (args[0].equals("2")) {
+            consumerService.takeTable();
+        }
+        exit(0);
+    }
 
 }

@@ -1,6 +1,7 @@
 package com.vika.kafka.entity;
 
 import lombok.EqualsAndHashCode;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.util.Date;
@@ -8,7 +9,7 @@ import java.util.Date;
 
 @EqualsAndHashCode
 @Entity
-@Table(name="table2")
+@Table(name = "table2")
 public class TableEn2 extends TableEn {
     public TableEn2() {
     }

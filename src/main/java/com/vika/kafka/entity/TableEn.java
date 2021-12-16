@@ -1,6 +1,8 @@
 package com.vika.kafka.entity;
+
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
+
 import javax.persistence.*;
 import java.util.Date;
 
@@ -18,7 +20,7 @@ public abstract class TableEn {
     @Column(name = "name")
     private String name;
 
-    @Column(name="timestamp", unique = true)
+    @Column(name = "timestamp", unique = true)
     @Temporal(TemporalType.TIMESTAMP)
     private Date timestamp;
 

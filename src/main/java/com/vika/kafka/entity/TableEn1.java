@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @ToString
 @EqualsAndHashCode
 @Entity
-@Table(name="table1")
+@Table(name = "table1")
 public class TableEn1 extends TableEn {
 
 }

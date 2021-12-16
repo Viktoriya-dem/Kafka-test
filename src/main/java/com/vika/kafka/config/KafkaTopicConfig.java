@@ -13,7 +13,7 @@ import java.util.Map;
 @Configuration
 class KafkaTopicConfig {
 
-    @Value(value = "${kafka.bootstrapAddress}")
+    @Value(value = "${kafka.bootstrap-servers}")
     private String bootstrapAddress;
 
     @Bean
@@ -23,12 +23,11 @@ class KafkaTopicConfig {
         return new KafkaAdmin(configs);
     }
 
-    @Value("data1")
+    @Value("${tpd.topicName}")
     private String topic1;
 
     @Bean
     public NewTopic topic1() {
-
         return new NewTopic(topic1, 12, (short) 1);
     }
 }
